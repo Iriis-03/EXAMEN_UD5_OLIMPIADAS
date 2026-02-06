@@ -37,11 +37,21 @@ public class Equipo {
     public String toString() {
         return "Equipo{" +
                 "pais='" + pais + '\'' +
-                ", lstaDeportista=" + lstaDeportista +
+                ", lstaDeportista=" + listaDeportista +
                 '}';
     }
 
     public void inscribirDeportista(Deportista deportista){
+        Deportista deportista1 = new Equipo(deportista);
+        listaDeportista.add(deportista);
+    }
 
+    public void medallasTotales(){
+        int contadormedallastotales = 0;
+        for (Deportista deportista : getListaDeportista()) {
+            if (deportista.getEquipo().equals(deportista)) {
+                contadormedallastotales++;
+            }
+        }
     }
 }

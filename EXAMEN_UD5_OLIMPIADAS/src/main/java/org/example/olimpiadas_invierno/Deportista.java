@@ -11,12 +11,12 @@ public class Deportista {
     private Equipo equipo;
     private ArrayList<String> listaModalidades;
 
-    public Deportista(String nombre, LocalDate fecha_nacimiento, int medallas, Equipo equipo, ArrayList<String> listaModalidades) {
+    public Deportista(String nombre, LocalDate fecha_nacimiento, int medallas, Equipo equipo) {
         this.nombre = nombre;
         this.fecha_nacimiento = fecha_nacimiento;
         this.medallas = medallas;
         this.equipo = equipo;
-        this.listaModalidades = new ArrayList<>();
+        listaModalidades = new ArrayList<>();
     }
 
     public Deportista() {
@@ -24,8 +24,9 @@ public class Deportista {
         this.fecha_nacimiento = fecha_nacimiento;
         this.medallas = medallas;
         this.equipo = equipo;
-        this.listaModalidades = listaModalidades;
+        listaModalidades = new ArrayList<>();
     }
+
 
     public String getNombre() {
         return nombre;
@@ -65,6 +66,36 @@ public class Deportista {
 
     public void setListaModalidades(ArrayList<String> listaModalidades) {
         this.listaModalidades = listaModalidades;
+    }
+
+    @Override
+    public String toString() {
+        return "Deportista{" +
+                "nombre='" + nombre + '\'' +
+                ", fecha_nacimiento=" + fecha_nacimiento +
+                ", medallas=" + medallas +
+                ", equipo=" + equipo +
+                ", listaModalidades=" + listaModalidades +
+                '}';
+    }
+
+    public void inscribirse(String modalidad){
+        Equipo equipo = new Equipo(modalidad);
+        listaModalidades.add(modalidad);
+    }
+
+    public void verModalidades(){
+        System.out.println("El deportista " + getNombre() + "participa en " + listaModalidades + "modalidades");
+    }
+
+    public void verMedallero() {
+        System.out.println("Deportistas que han coseguido medallas para ESPAÑA");
+    }
+
+
+
+    public void deportistaTOP(){
+
     }
 
 
