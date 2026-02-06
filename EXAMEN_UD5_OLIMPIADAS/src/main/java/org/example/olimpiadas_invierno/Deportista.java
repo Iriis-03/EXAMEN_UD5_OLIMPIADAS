@@ -1,0 +1,71 @@
+package org.example.olimpiadas_invierno;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Deportista {
+
+    private String nombre;
+    private LocalDate fecha_nacimiento;
+    private int medallas;
+    private Equipo equipo;
+    private ArrayList<String> listaModalidades;
+
+    public Deportista(String nombre, LocalDate fecha_nacimiento, int medallas, Equipo equipo, ArrayList<String> listaModalidades) {
+        this.nombre = nombre;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.medallas = medallas;
+        this.equipo = equipo;
+        this.listaModalidades = new ArrayList<>();
+    }
+
+    public Deportista() {
+        this.nombre = nombre;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.medallas = medallas;
+        this.equipo = equipo;
+        this.listaModalidades = listaModalidades;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public LocalDate getFecha_nacimiento() {
+        return fecha_nacimiento;
+    }
+
+    public void setFecha_nacimiento(LocalDate fecha_nacimiento) {
+        this.fecha_nacimiento = fecha_nacimiento;
+    }
+
+    public int getMedallas() {
+        return medallas;
+    }
+
+    public void setMedallas(int medallas) {
+        this.medallas = medallas;
+    }
+
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
+
+    public ArrayList<String> getListaModalidades() {
+        return listaModalidades;
+    }
+
+    public void setListaModalidades(ArrayList<String> listaModalidades) {
+        this.listaModalidades = listaModalidades;
+    }
+
+
+}
