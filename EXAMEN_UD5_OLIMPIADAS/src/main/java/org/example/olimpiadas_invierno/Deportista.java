@@ -98,5 +98,17 @@ public class Deportista {
 
     }
 
+    public void verMedallasDeportista(Deportista deportista){
+
+    }
+
+    public void deportistaMasJoven() {
+
+        if (fecha_nacimiento < Deportista){
+            System.out.println("El deportista más joven es: " + Deportista);
+        }
+    }
+
+
 
 }
